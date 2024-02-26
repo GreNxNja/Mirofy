@@ -40,7 +40,7 @@ Welcome to the **Miro Clone** project! This full-stack web application aims to r
 1. Run the development server:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 2. Access the application in your web browser:
@@ -58,26 +58,6 @@ We welcome contributions from the community! If you'd like to contribute to this
 
 This project is licensed under the **MIT License**.
 
-## Additional Information
-
-### Install Dependencies:
-
-```bash
-cd miro-clone
-npm install
-```
-
-### Set up Environment Variables:
-
-Create a `.env` file in the root directory and add the necessary configuration for your backend and authentication service.
-
-### Run Development Server:
-
-```bash
-npm start
-```
-
-Access the application in your web browser.
 
 ### Usage:
 
