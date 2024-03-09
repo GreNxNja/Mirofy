@@ -1,4 +1,4 @@
-## Miro Clone
+## Mirofy
 
 **Overview**
 
