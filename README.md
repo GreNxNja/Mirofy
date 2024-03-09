@@ -1,3 +1,6 @@
+Certainly, here's the full README with the updated instructions:
+
+```markdown
 ## Miro Clone
 
 **Overview**
@@ -11,9 +14,8 @@ The Miro Clone project aims to replicate the features and functionality of Miro,
   - React
   - Tailwind CSS
 - **Backend:**
-  - [Specify your chosen backend framework or technology]
+  - Clerk (authentication)
 - **Real-Time Collaboration:**
-  - Clerk (user authentication)
   - Convex (real-time collaboration)
   - Liveblocks (real-time updates)
 
@@ -28,14 +30,18 @@ npm install
 
 2. **Set up environment variables:**
 
-Create a `.env` file in the project root directory and add the necessary configuration details for your backend and authentication service.
+Create a `.env` file in the project root directory and add the necessary configuration details for your authentication service.
+
+```plaintext
+CLERK_FRONTEND_API_KEY=your_clerk_frontend_api_key
+```
 
 **Usage**
 
 1. **Run the development server:**
 
 ```bash
-npm start
+npm run dev
 ```
 
 2. **Access the application:**
@@ -44,7 +50,7 @@ Open your web browser and navigate to the provided URL (usually `http://localhos
 
 3. **Register or log in:**
 
-Use the provided authentication service to register or log in to your account.
+Use the Clerk authentication service to register or log in to your account.
 
 4. **Start collaborating:**
 
@@ -59,3 +65,6 @@ Contributions from the community are welcome! If you'd like to be involved, plea
 **License**
 
 This project is licensed under the MIT License.
+```
+
+This README provides comprehensive instructions on setting up the project, running the development server, accessing the application, and contributing to the project.
