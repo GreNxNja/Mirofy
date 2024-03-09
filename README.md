@@ -1,6 +1,3 @@
-Certainly, here's the full README with the updated instructions:
-
-```markdown
 ## Miro Clone
 
 **Overview**
@@ -65,6 +62,6 @@ Contributions from the community are welcome! If you'd like to be involved, plea
 **License**
 
 This project is licensed under the MIT License.
-```
 
-This README provides comprehensive instructions on setting up the project, running the development server, accessing the application, and contributing to the project.
+
+
