@@ -45,7 +45,7 @@ npm install
 ```bash 
 npx convex dev
 ```
-#Please set up the following configurations in your local .env file:
+**Please set up the following configurations in your local .env file:**
 
 ```bash
 CONVEX_DEPLOYMENT=dev # team: [your_team_name]
