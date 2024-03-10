@@ -45,6 +45,8 @@ npm install
 ```bash 
 npx convex dev
 ```
+#Please set up the following configurations in your local .env file:
+
 ```bash
 CONVEX_DEPLOYMENT=dev # team: [your_team_name]
 NEXT_PUBLIC_CONVEX_URL=replace_this_with_your_own_link
