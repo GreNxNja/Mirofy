@@ -42,12 +42,13 @@ npm install
 ```
 
 # Deployment used by `npx convex dev`
-CONVEX_DEPLOYMENT=dev # team: [your_team_name]
 
+```bash
+CONVEX_DEPLOYMENT=dev # team: [your_team_name]
 NEXT_PUBLIC_CONVEX_URL=replace_this_with_your_own_link
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=[user_clerk_publishable_key]
 CLERK_SECRET_KEY=[user_clerk_secret_key]
-
+```
 
 ### Usage
 
