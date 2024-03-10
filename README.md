@@ -37,7 +37,7 @@ Mirofy is a collaborative, real-time whiteboard application inspired by Miro, de
 1. **Install dependencies:**
 
 ```bash
-cd miro-clone
+cd Mirofy
 npm install
 ```
 
