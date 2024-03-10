@@ -41,7 +41,7 @@ cd miro-clone
 npm install
 ```
 
-# Deployment used by `npx convex dev`
+# Deployment used by *npx convex dev*
 
 ```bash
 CONVEX_DEPLOYMENT=dev # team: [your_team_name]
