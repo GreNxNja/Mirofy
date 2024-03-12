@@ -37,16 +37,21 @@ Mirofy is a collaborative, real-time whiteboard application inspired by Miro, de
 1. **Install dependencies:**
 
 ```bash
-cd miro-clone
+cd Mirofy
 npm install
 ```
 
-2. **Set up environment variables:**
+### Deployment used by 
+```bash 
+npx convex dev
+```
+**Please set up the following configurations in your local `.env` file:**
 
-Create a `.env` file in the project root directory and add the necessary configuration details for your authentication service.
-
-```plaintext
-CLERK_FRONTEND_API_KEY=your_clerk_frontend_api_key
+```bash
+CONVEX_DEPLOYMENT=dev # team: [your_team_name]
+NEXT_PUBLIC_CONVEX_URL=replace_this_with_your_own_link
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=[user_clerk_publishable_key]
+CLERK_SECRET_KEY=[user_clerk_secret_key]
 ```
 
 ### Usage
