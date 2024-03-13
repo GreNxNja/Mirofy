@@ -4,7 +4,7 @@ import { getAllOrThrow } from "convex-helpers/server/relationships";
 import { query } from "./_generated/server";
 
 export const get = query({
-    args: {
+args: {
         orgId: v.string(),
         search: v.optional(v.string()),
         favorites: v.optional(v.string()),
