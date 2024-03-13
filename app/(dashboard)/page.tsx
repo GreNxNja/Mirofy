@@ -25,3 +25,4 @@ const DashboardPage = ({ searchParams }: DashboardPageProps) => {
     </div>
   );
 };
+export default DashboardPage;
