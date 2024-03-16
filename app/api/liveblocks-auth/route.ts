@@ -9,7 +9,7 @@ const convex = new ConvexHttpClient(
 );
 
 const liveblocks = new Liveblocks({
-    secret: "sk_dev_fj931mGcRr8aSJ - e - PCA2S0IE3YR4ZYWjv2RpzkUta9MYKJDz9Ax - O2pzj31qQdS",
+    secret: process.env.LIVEBLOCKS_SECRET_KEY!,
 });
 
 export async function POST(request: Request) {
