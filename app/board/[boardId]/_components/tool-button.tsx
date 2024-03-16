@@ -11,7 +11,7 @@ interface ToolButtonProps {
   onClick: () => void;
   isActive?: boolean;
   isDisabled?: boolean;
-};
+}
 
 export const ToolButton = ({
   label,

@@ -6,7 +6,7 @@ interface RectangleProps {
   layer: RectangleLayer;
   onPointerDown: (e: React.PointerEvent, id: string) => void;
   selectionColor?: string;
-};
+}
 
 export const Rectangle = ({
   id,

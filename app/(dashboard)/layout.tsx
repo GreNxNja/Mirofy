@@ -4,11 +4,9 @@ import { OrgSidebar } from "./_components/org-sidebar";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
-};
+}
 
-const DashboardLayout = ({
-  children,
-}: DashboardLayoutProps) => {
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <main className="h-full">
       <Sidebar />

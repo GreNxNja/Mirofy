@@ -19,16 +19,9 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { api } from "@/convex/_generated/api";
 
 export const RenameModal = () => {
-  const { 
-    mutate, 
-    pending
-  } = useApiMutation(api.board.update);
+  const { mutate, pending } = useApiMutation(api.board.update);
 
-  const {
-    isOpen,
-    onClose,
-    initialValues,
-  } = useRenameModal();
+  const { isOpen, onClose, initialValues } = useRenameModal();
 
   const [title, setTitle] = useState(initialValues.title);
 
@@ -36,9 +29,7 @@ export const RenameModal = () => {
     setTitle(initialValues.title);
   }, [initialValues.title]);
 
-  const onSubmit: FormEventHandler<HTMLFormElement> = (
-    e,
-  ) => {
+  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
     mutate({
@@ -56,13 +47,9 @@ export const RenameModal = () => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>
-            Edit board title
-          </DialogTitle>
+          <DialogTitle>Edit board title</DialogTitle>
         </DialogHeader>
-        <DialogDescription>
-          Enter a new title for this board
-        </DialogDescription>
+        <DialogDescription>Enter a new title for this board</DialogDescription>
         <form onSubmit={onSubmit} className="space-y-4">
           <Input
             disabled={pending}

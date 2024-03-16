@@ -16,19 +16,15 @@ const calculateFontSize = (width: number, height: number) => {
   const fontSizeBasedOnHeight = height * scaleFactor;
   const fontSizeBasedOnWidth = width * scaleFactor;
 
-  return Math.min(
-    fontSizeBasedOnHeight, 
-    fontSizeBasedOnWidth, 
-    maxFontSize
-  );
-}
+  return Math.min(fontSizeBasedOnHeight, fontSizeBasedOnWidth, maxFontSize);
+};
 
 interface NoteProps {
   id: string;
   layer: NoteLayer;
   onPointerDown: (e: React.PointerEvent, id: string) => void;
   selectionColor?: string;
-};
+}
 
 export const Note = ({
   layer,
@@ -38,10 +34,7 @@ export const Note = ({
 }: NoteProps) => {
   const { x, y, width, height, fill, value } = layer;
 
-  const updateValue = useMutation((
-    { storage },
-    newValue: string,
-  ) => {
+  const updateValue = useMutation(({ storage }, newValue: string) => {
     const liveLayers = storage.get("layers");
 
     liveLayers.get(id)?.set("value", newValue);

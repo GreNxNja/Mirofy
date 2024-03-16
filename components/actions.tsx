@@ -10,7 +10,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
@@ -23,7 +22,7 @@ interface ActionsProps {
   sideOffset?: DropdownMenuContentProps["sideOffset"];
   id: string;
   title: string;
-};
+}
 
 export const Actions = ({
   children,
@@ -36,11 +35,10 @@ export const Actions = ({
   const { mutate, pending } = useApiMutation(api.board.remove);
 
   const onCopyLink = () => {
-    navigator.clipboard.writeText(
-      `${window.location.origin}/board/${id}`,
-    )
+    navigator.clipboard
+      .writeText(`${window.location.origin}/board/${id}`)
       .then(() => toast.success("Link copied"))
-      .catch(() => toast.error("Failed to copy link"))
+      .catch(() => toast.error("Failed to copy link"));
   };
 
   const onDelete = () => {
@@ -51,21 +49,16 @@ export const Actions = ({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        {children}
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
       <DropdownMenuContent
         onClick={(e) => e.stopPropagation()}
         side={side}
         sideOffset={sideOffset}
         className="w-60"
       >
-        <DropdownMenuItem
-          onClick={onCopyLink}
-          className="p-3 cursor-pointer"
-        >
+        <DropdownMenuItem onClick={onCopyLink} className="p-3 cursor-pointer">
           <Link2 className="h-4 w-4 mr-2" />
-          Copy board link
+          Copy link
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => onOpen(id, title)}

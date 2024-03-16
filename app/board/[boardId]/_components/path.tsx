@@ -7,9 +7,9 @@ interface PathProps {
   y: number;
   points: number[][];
   fill: string;
-  onPointerDown?: (e: React.PointerEvent)  => void;
+  onPointerDown?: (e: React.PointerEvent) => void;
   stroke?: string;
-};
+}
 
 export const Path = ({
   x,
