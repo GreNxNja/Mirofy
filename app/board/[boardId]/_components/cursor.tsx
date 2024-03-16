@@ -8,11 +8,13 @@ import { connectionIdToColor } from "@/lib/utils";
 
 interface CursorProps {
   connectionId: number;
-}
+};
 
-export const Cursor = memo(({ connectionId }: CursorProps) => {
+export const Cursor = memo(({
+  connectionId,
+}: CursorProps) => {
   const info = useOther(connectionId, (user) => user?.info);
-  const cursor = useOther(connectionId, (user) => user.presence.cursor);
+  const cursor = useOther(connectionId, (user) => user.presence.cursor)
 
   const name = info?.name || "Teammate";
 
@@ -25,7 +27,7 @@ export const Cursor = memo(({ connectionId }: CursorProps) => {
   return (
     <foreignObject
       style={{
-        transform: `translateX(${x}px) translateY(${y}px)`,
+        transform: `translateX(${x}px) translateY(${y}px)`
       }}
       height={50}
       width={name.length * 10 + 24}
@@ -45,7 +47,7 @@ export const Cursor = memo(({ connectionId }: CursorProps) => {
         {name}
       </div>
     </foreignObject>
-  );
+  )
 });
 
 Cursor.displayName = "Cursor";

@@ -16,10 +16,13 @@ interface BoardListProps {
     search?: string;
     favorites?: string;
   };
-}
+};
 
-export const BoardList = ({ orgId, query }: BoardListProps) => {
-  const data = useQuery(api.boards.get, {
+export const BoardList = ({
+  orgId,
+  query,
+}: BoardListProps) => {
+  const data = useQuery(api.boards.get, { 
     orgId,
     ...query,
   });
@@ -38,7 +41,7 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
           <BoardCard.Skeleton />
         </div>
       </div>
-    );
+    )
   }
 
   if (!data?.length && query.search) {
@@ -46,11 +49,11 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
   }
 
   if (!data?.length && query.favorites) {
-    return <EmptyFavorites />;
+    return <EmptyFavorites />
   }
 
   if (!data?.length) {
-    return <EmptyBoards />;
+    return <EmptyBoards />
   }
 
   return (

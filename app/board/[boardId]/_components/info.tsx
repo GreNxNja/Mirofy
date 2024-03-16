@@ -16,7 +16,7 @@ import { useRenameModal } from "@/store/use-rename-modal";
 
 interface InfoProps {
   boardId: string;
-}
+};
 
 const font = Poppins({
   subsets: ["latin"],
@@ -24,10 +24,16 @@ const font = Poppins({
 });
 
 const TabSeparator = () => {
-  return <div className="text-neutral-300 px-1.5">|</div>;
+  return (
+    <div className="text-neutral-300 px-1.5">
+      |
+    </div>
+  );
 };
 
-export const Info = ({ boardId }: InfoProps) => {
+export const Info = ({
+  boardId,
+}: InfoProps) => {
   const { onOpen } = useRenameModal();
 
   const data = useQuery(api.board.get, {
@@ -41,14 +47,17 @@ export const Info = ({ boardId }: InfoProps) => {
       <Hint label="Go to boards" side="bottom" sideOffset={10}>
         <Button asChild variant="board" className="px-2">
           <Link href="/">
-            <Image src="/logo.svg" alt="Board logo" height={40} width={40} />
-            <span
-              className={cn(
-                "font-semibold text-xl ml-2 text-black",
-                font.className
-              )}
-            >
-              Mirofy
+            <Image
+              src="/logo.svg"
+              alt="Board logo"
+              height={40}
+              width={40}
+            />
+            <span className={cn(
+              "font-semibold text-xl ml-2 text-black",
+              font.className,
+            )}>
+              Board
             </span>
           </Link>
         </Button>
@@ -64,7 +73,12 @@ export const Info = ({ boardId }: InfoProps) => {
         </Button>
       </Hint>
       <TabSeparator />
-      <Actions id={data._id} title={data.title} side="bottom" sideOffset={10}>
+      <Actions
+        id={data._id}
+        title={data.title}
+        side="bottom"
+        sideOffset={10}
+      >
         <div>
           <Hint label="Main menu" side="bottom" sideOffset={10}>
             <Button size="icon" variant="board">
@@ -79,6 +93,8 @@ export const Info = ({ boardId }: InfoProps) => {
 
 export const InfoSkeleton = () => {
   return (
-    <div className="absolute top-2 left-2 bg-white rounded-md px-1.5 h-12 flex items-center shadow-md w-[300px]" />
+    <div 
+      className="absolute top-2 left-2 bg-white rounded-md px-1.5 h-12 flex items-center shadow-md w-[300px]"
+    />
   );
 };

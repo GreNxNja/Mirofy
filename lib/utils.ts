@@ -1,22 +1,22 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-import {
-  Camera,
-  Color,
-  Layer,
-  LayerType,
-  PathLayer,
-  Point,
-  Side,
+import { 
+  Camera, 
+  Color, 
+  Layer, 
+  LayerType, 
+  PathLayer, 
+  Point, 
+  Side, 
   XYWH
 } from "@/types/canvas";
 
 const COLORS = [
-  "#DC2626",
-  "#D97706",
-  "#059669",
-  "#7C3AED",
+  "#DC2626", 
+  "#D97706", 
+  "#059669", 
+  "#7C3AED", 
   "#DB2777"
 ];
 
@@ -43,8 +43,8 @@ export function colorToCss(color: Color) {
 }
 
 export function resizeBounds(
-  bounds: XYWH,
-  corner: Side,
+  bounds: XYWH, 
+  corner: Side, 
   point: Point
 ): XYWH {
   const result = {
@@ -103,7 +103,7 @@ export function findIntersectingLayersWithRectangle(
 
     if (
       rect.x + rect.width > x &&
-      rect.x < x + width &&
+      rect.x < x + width && 
       rect.y + rect.height > y &&
       rect.y < y + height
     ) {
